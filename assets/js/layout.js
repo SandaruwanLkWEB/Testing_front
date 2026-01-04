@@ -7,7 +7,7 @@ function buildMenu(role){
   if (r && r !== "EMPLOYEE" && r !== "SECURITY") add("dashboard.html", "menu.dashboard");
 
   if (r && r !== "SECURITY") add("leave-request.html", "menu.request");
-  if (r) add("my-leaves.html", "menu.myleaves");
+  if (r && r !== "SECURITY") add("my-leaves.html", "menu.myleaves");
 
   if (r === "HOD") add("approvals.html", "menu.dept_requests");
   if (r === "ADMIN") add("approvals.html", "menu.hod_requests");
